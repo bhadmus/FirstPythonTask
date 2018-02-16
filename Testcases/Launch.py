@@ -1,4 +1,4 @@
-from selenium import webdriver
+Qwerty123@"from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 
@@ -8,12 +8,13 @@ driver.maximize_window()
 driver.find_element_by_xpath('//*[@id="nav-link-accountList"]/span[1]').click()
 driver.find_element_by_id("ap_email").send_keys("ademolabhadmus@hotmail.com")
 time.sleep(2)
-driver.find_element_by_id("ap_password").send_keys("Qwerty123@")
+driver.find_element_by_id("ap_password").send_keys("********")
 time.sleep(1)
 driver.find_element_by_id("signInSubmit").click()
 time.sleep(5)
 driver.execute_script("window.scrollTo(0,120)")
 posToHover = driver.find_element_by_xpath('//*[@id="nav-link-accountList"]/span[1]')
+assert poToHover.text == "Hello, Ademola"
 hover = ActionChains(driver).move_to_element(posToHover).perform()
 time.sleep(2)
 driver.find_element_by_xpath('//*[@id="nav-item-signout-sa"]/span').click()
