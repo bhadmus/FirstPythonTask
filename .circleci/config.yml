@@ -12,7 +12,8 @@ jobs:
     working_directory: ~/FirstPythonTask/TestCases
 
     steps:
-      - checkout
+      - checkout:
+          path: ~/FirstPythonTask
       
       - run: mkdir test-reports
       
