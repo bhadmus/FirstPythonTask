@@ -21,6 +21,19 @@ jobs:
       - checkout
 
       # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "requirements.txt" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+
+      - run:
+          name: install dependencies
+          command: |
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -U Selenium
+
       
 
       # run tests!
@@ -32,7 +45,7 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            python Launch.py Testcases
+            python Launch.py test
 
       - store_artifacts:
           path: test-reports
