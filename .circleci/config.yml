@@ -15,7 +15,7 @@ jobs:
       - checkout
       
       - run: mkdir test-reports
-      - run: python manage.py test
+      - run: python Launch.py test
           
       - store_artifacts:
           path: test-reports
