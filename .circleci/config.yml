@@ -9,12 +9,15 @@ jobs:
 
      
 
-    working_directory: $CIRCLE_WORKING_DIRECTORY
+    working_directory: ~/FirstPythonTask/TestCases
 
     steps:
       - checkout
       
       - run: mkdir test-reports
+      - run:
+        command: |
+          cd TestCases
       - run: python Launch.py test
           
       - store_artifacts:
