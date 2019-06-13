@@ -9,7 +9,7 @@ jobs:
 
      
 
-    working_directory: ~/i-am-sanguine/FirstPythonTask
+    working_directory: ~/FirstPythonTask
 
     steps:
       - checkout
