@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - checkout
-      - run: pip3 install --upgrade pip3
+      - run: pip3 install --upgrade pip
       - run: pip3 install -U Selenium
       - run: python Launch.py 
           
