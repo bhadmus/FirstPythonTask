@@ -14,10 +14,8 @@ jobs:
     steps:
       - checkout:
           path: ~/FirstPythonTask
-      
-      - run: mkdir test-reports
-      
       - run: python Launch.py test
+      - run: mkdir test-reports
           
       - store_artifacts:
           path: test-reports
