@@ -19,7 +19,8 @@ jobs:
 
     steps:
       - checkout
-      - run: pip install -U Selenium
+      - run: pip3 install --upgrade pip3
+      - run: pip3 install -U Selenium
       - run: python Launch.py 
           
       - store_artifacts:
