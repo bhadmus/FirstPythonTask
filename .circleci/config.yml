@@ -15,9 +15,7 @@ jobs:
       - checkout
       
       - run: mkdir test-reports
-      - run:
-        command: |
-          cd TestCases
+      - run: cd TestCases
       - run: python Launch.py test
           
       - store_artifacts:
