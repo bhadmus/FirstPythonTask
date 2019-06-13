@@ -19,11 +19,6 @@ jobs:
 
     steps:
       - checkout
-
-      # Download and cache dependencies
-      
-
-      - run: pip install --upgrade pip
       - run: pip install -U Selenium
       - run: python Launch.py 
           
