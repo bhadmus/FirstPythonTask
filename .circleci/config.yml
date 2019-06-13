@@ -9,7 +9,7 @@ jobs:
 
      
 
-    working_directory: ~/FirstPythonTask
+    working_directory: $CIRCLE_WORKING_DIRECTORY
 
     steps:
       - checkout
