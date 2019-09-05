@@ -1,14 +1,11 @@
-## Set the artifacts
 general:
   artifacts:
     - "./tests/screenshots" #Save the screenshots for the tests
  
-## Customize dependencies
 dependencies:
   pre:
     - sudo pip install -U selenium	
  
-## Running Tests
 test:
    override:
     - python tests/Navigate_Qxf2_Tutorial_Test.py
