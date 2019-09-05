@@ -1,22 +1,14 @@
-
-version: 2
-jobs:
-  build:
-    docker:
-      
-      - image: circleci/python:3.6.1
-      - image: selenium/standalone-chrome:3.1.0
-
-     
-
-    working_directory: ~/FirstPythonTask/TestCases
-
-    steps:
-      - checkout:
-          path: ~/FirstPythonTask
-      - run: python Launch.py test
-      - run: mkdir test-reports
-          
-      - store_artifacts:
-          path: test-reports
-          destination: test-reports
+## Set the artifacts
+general:
+  artifacts:
+    - "./tests/screenshots" #Save the screenshots for the tests
+ 
+## Customize dependencies
+dependencies:
+  pre:
+    - sudo pip install -U selenium	
+ 
+## Running Tests
+test:
+   override:
+    - python tests/Navigate_Qxf2_Tutorial_Test.py
