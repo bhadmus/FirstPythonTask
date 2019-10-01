@@ -1,0 +1,9 @@
+email = 'ademolabhadmus@hotmail.com'
+pwd = 'Incorrect12@'
+url = "https://www.amazon.com"
+open_sign_in = '//*[@id="nav-link-accountList"]/span[2]'
+username = "ap_email"
+password = "ap_password"
+proceed = 'continue'
+submit = "signInSubmit"
+otp = '//*[@id="cvf-page-content"]/div/div/div[1]/form/div[2]/div'
