@@ -7,7 +7,7 @@ from values import strings
 
 driver = webdriver.Chrome()
 driver.get(strings.url)
-driver.maximize_window()
+# driver.maximize_window()
 WebDriverWait(driver, 10).until(EC.visibility_of_element_located((By.XPATH,'//*[@id="nav-link-accountList"]/span[1]')))
 time.sleep(3)
 driver.find_element_by_xpath(strings.open_sign_in).click()
